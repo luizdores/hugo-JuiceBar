@@ -73,15 +73,15 @@
     }
 
     // Retrieve the user-selected theme mode from local storage
-    let theme = localStorage.getItem("theme") || "light";
-    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (isDarkMode) {
+    let theme = localStorage.getItem("theme") || "dark";
+    const isLightMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    if (isLightMode) {
         // Site is in dark mode
-        setTheme('dark');
+        setTheme('light');
 
     } else {
         // Site is in light mode
-        setTheme('light');
+        setTheme('dark');
     }
     setTheme(theme);
 
