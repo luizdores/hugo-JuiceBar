@@ -15,13 +15,18 @@
 
                         <h1 id="home-title" class="title is-1 ">{{ .Title }}</h1>
                     <div class="description column content typewriter-effect">
-                        <div class="text" id="typewriter-text"> {{ .Content }}</div>
-
+                        <div class="text"  id="typewriter-text"> {{ .Content }}</div>
                     </div>
+                    
                     <script>
                         const typeWriter = document.getElementById('typewriter-text');
                         typeWriter.style.setProperty('--characters', typeWriter.innerHTML.length);
+                        typeWriter.addEventListener('animationiteration', function() {
+                          typeWriter.parentElement.classList.add('stop-animation');
+                          typeWriter.style.animation = 'none';
+                        });
                     </script>
+                  
 
                     <div class="social-icon">
 

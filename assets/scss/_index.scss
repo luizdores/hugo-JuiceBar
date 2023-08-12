@@ -13,25 +13,28 @@
     font-size: $font-size-content;
   }
 
-  .typewriter-effect {
-    display: flex;
+  .typewriter-effect { 
+    display: flex; 
     justify-content: center;
 
     .text {
       max-width: 0;
-      text-transform: capitalize;
       animation: typing 3s steps(var(--characters)) infinite;
       white-space: nowrap;
       overflow: hidden;
     }
-
+    
     &:after {
       content: " |";
       animation: blink 1s infinite;
       animation-timing-function: step-end;
     }
+    
+    &.stop-animation .text {
+      max-width: calc(var(--characters) * 1ch);
+    }
   }
-
+  
   //Override bulma's style
   .avatar-container {
     text-align: center;
