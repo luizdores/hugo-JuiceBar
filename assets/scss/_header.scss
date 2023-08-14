@@ -142,6 +142,22 @@
   color: $dark-font;
 }
 
+/* Flags navigation */
+.flagselect {
+  border: 1px solid #333333;
+  padding: 0px;
+  margin: 0px;
+  font-weight: bold;
+  color: black;
+  font-size: 90%;
+}
+.flagnoselect {
+  padding: 0px;
+  margin: 0px;
+  color: #333333;
+  font-size: 90%;
+}
+
 
 
 
